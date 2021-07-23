@@ -1,0 +1,16 @@
+version: '2.2'
+services:
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.1.0
+    container_name: es
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+  #es-crud:
+  #  image: es-crud:0.1.0
+  #  ports:
+  #    - 8081:8081
+  #  container_name: es-crud
+  #  stdin_open: true # docker run -i
+  #  tty: true        # docker run -t
